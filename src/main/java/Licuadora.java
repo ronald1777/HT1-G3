@@ -1,4 +1,4 @@
-public class Licuadora {
+public class Licuadora implements LicuadoraInterface {
     int currentElements = 0;
     boolean state = false;
     boolean full = false;
@@ -8,7 +8,7 @@ public class Licuadora {
         if (full) {
             currentElements++;
         }
-        full = currentElements > 5 ? true : false;
+        full = (currentElements > 5) ? true : false;
     }
 
     public boolean isFull () {
