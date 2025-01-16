@@ -15,12 +15,23 @@ public class Licuadora implements LicuadoraInterface {
         return full;
     }
 
-    public void changeSpeed(boolean increase) {
-        if (increase) {
+    public boolean changeSpeed(boolean increase) {
+
+        if (isFull()) {
+            if (increase) {
+        
             speed = (speed + 1) > 10 ? 0 : speed + 1;
+            return true; 
+            // Changed the speed succesfully
         }
         else {
             speed = (speed - 1) < 0 ? 0 : speed - 1;
+            return true; 
+            // Changed the speed succesfully
+            }
+        } else {
+            return false; 
+            //Licuadora isnt full, couldnt change speed
         }
     }
 
