@@ -31,6 +31,7 @@ public class Licuadora implements LicuadoraInterface {
                 // Changed the speed succesfully
             }
         } else {
+            state = false;
             return false; 
             //Licuadora isnt full, couldnt change speed
         }
