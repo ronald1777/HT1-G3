@@ -5,10 +5,10 @@ public class Licuadora implements LicuadoraInterface {
     int speed = 0;
 
     public void addElement () {
-        if (full) {
+        if (!full) {
             currentElements++;
         }
-        full = (currentElements > 5) ? true : false;
+        full = currentElements == 5;
     }
 
     public boolean isFull () {
@@ -16,18 +16,19 @@ public class Licuadora implements LicuadoraInterface {
     }
 
     public boolean changeSpeed(boolean increase) {
-
         if (isFull()) {
             if (increase) {
         
-            speed = (speed + 1) > 10 ? 0 : speed + 1;
-            return true; 
-            // Changed the speed succesfully
-        }
-        else {
-            speed = (speed - 1) < 0 ? 0 : speed - 1;
-            return true; 
-            // Changed the speed succesfully
+                speed = (speed + 1) > 10 ? 0 : speed + 1;
+                state = true;
+                return true;
+                // Changed the speed succesfully
+            }
+            else {
+                speed = (speed - 1) < 0 ? 0 : speed - 1;
+                state = true;
+                return true;
+                // Changed the speed succesfully
             }
         } else {
             return false; 
