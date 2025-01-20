@@ -1,6 +1,7 @@
 # Hoja de trabajo 1
 
-![image](https://github.com/user-attachments/assets/a3694ec3-85c4-461b-b4fc-ec689e1b8c6c)
+![image](https://github.com/user-attachments/assets/83ad550e-490e-4c8d-ad40-50b60e754360)
+
 
 ## Requerimientos
 
